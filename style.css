@@ -1,131 +1,80 @@
-/* Dark Mode */
-:root {
-    --bg-color: #121212;
-    --card-color: #1e1e1e;
-    --text-color: #ffffff;
-    --accent-color: #4CAF50;
-    --hover-color: #2e2e2e;
-    --link-color: #81c784;
-  }
-  
-  body {
-    margin: 0;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  /* Navigation Bar */
-  nav {
-    background-color: var(--card-color);
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+/* Global Dark Mode Setup */
+body {
     margin: 0;
     padding: 0;
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Courier New', monospace;
   }
   
-  nav a {
-    color: var(--link-color);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  nav a:hover {
-    color: var(--accent-color);
-  }
-  
-  /* Header */
-  header {
-    text-align: center;
+  /* Main container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 2rem 1rem;
+    text-align: center;
   }
   
-  header h1 {
-    margin: 0;
+  /* Header styles */
+  h1 {
     font-size: 2rem;
+    margin-bottom: 1rem;
   }
   
-  header p {
-    margin-top: 1rem;
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+  .intro {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
   }
   
-  /* Main Content */
-  .projects-container {
+  /* Columns layout */
+  .columns {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
+    justify-content: space-around;
     flex-wrap: wrap;
+    gap: 2rem;
   }
   
-  /* Category Columns */
-  .category {
-    background-color: var(--card-color);
+  /* Individual category column */
+  .column {
+    background-color: #1e1e1e;
     border-radius: 12px;
     padding: 1rem;
     width: 280px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
   }
   
-  .category h2 {
-    text-align: center;
-    font-size: 1.2rem;
+  .category-title {
+    font-size: 1.1rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid var(--accent-color);
+    border-bottom: 1px solid #4CAF50;
     padding-bottom: 0.5rem;
   }
   
-  /* Project Cards */
+  /* Project buttons */
   .project {
-    background: var(--hover-color);
-    border-radius: 8px;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    transition: background 0.3s;
-  }
-  
-  .project a {
+    display: block;
+    background-color: #2a2a2a;
+    color: #fff;
     text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
   }
   
   .project:hover {
-    background-color: var(--accent-color);
-    color: var(--bg-color);
+    background-color: #4CAF50;
+    color: #121212;
   }
   
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 2rem;
-    font-size: 0.9rem;
-    color: #aaa;
-  }
-  
-  /* Responsive Design */
+  /* Responsive layout for smaller screens */
   @media (max-width: 900px) {
-    .projects-container {
+    .columns {
       flex-direction: column;
       align-items: center;
     }
   
-    .category {
+    .column {
       width: 90%;
     }
   }
