@@ -1,13 +1,13 @@
-/* Global Dark Mode Setup */
+/* Google Font */
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Shadows Into Light', cursive;
     background-color: #121212;
-    color: #fff;
-    font-family: 'Courier New', monospace;
+    color: #ffffff;
   }
   
-  /* Main container */
+  /* Container */
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -15,67 +15,70 @@ body {
     text-align: center;
   }
   
-  /* Header styles */
+  /* Header */
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
   }
   
+  /* Introduction */
   .intro {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   /* Columns layout */
   .columns {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 2rem;
   }
   
-  /* Individual category column */
+  /* Each column */
   .column {
     background-color: #1e1e1e;
-    border-radius: 12px;
+    border-radius: 20px;
     padding: 1rem;
-    width: 280px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    flex: 1 1 250px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
   }
   
-  .category-title {
-    font-size: 1.1rem;
+  .column h2 {
+    font-size: 1.3rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #4CAF50;
+    border-bottom: 1px solid #555;
     padding-bottom: 0.5rem;
   }
   
-  /* Project buttons */
-  .project {
+  /* Cards */
+  .card {
     display: block;
-    background-color: #2a2a2a;
+    background-color: #292929;
     color: #fff;
     text-decoration: none;
     margin: 0.5rem 0;
     padding: 1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s;
+    border-radius: 15px;
+    border: 2px solid #444;
+    transition: 0.3s;
   }
   
-  .project:hover {
-    background-color: #4CAF50;
-    color: #121212;
+  .card:hover {
+    background-color: #4caf50;
+    color: #000;
+    border-color: #4caf50;
   }
   
-  /* Responsive layout for smaller screens */
+  /* Responsive */
   @media (max-width: 900px) {
     .columns {
       flex-direction: column;
       align-items: center;
-    }
-  
-    .column {
-      width: 90%;
     }
   }
   
